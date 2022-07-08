@@ -1,24 +1,53 @@
-import logo from './logo.svg';
-import './App.css';
+import {
+  Box,
+  Form,
+  Title,
+  Button,
+  Footer,
+  LinkedinIcon,
+  TwitterIcon,
+  FacebookIcon,
+  PinterestIcon,
+  SocialMedia,
+  Pink,
+  Yellow,
+  Map,
+  YellowRight,
+  PinkRight,
+  Blue,
+} from './styles.js';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Yellow />
+      <Box>
+        <Title>
+          Reach out to us!
+        </Title>
+        <Form>
+          <input type="text" placeholder='Your name*' />
+          <input type="text" placeholder='Your email*' />
+          <input type="text" placeholder='Your message*' />
+        </Form>
+        <Button>
+          Send message
+        </Button>
+      </Box>
+      <Map/>
+      <YellowRight/>
+      <PinkRight/>
+      <Footer>
+      <Pink/>
+        <SocialMedia>
+        <LinkedinIcon/>
+        <TwitterIcon/>
+        <FacebookIcon/>
+        <PinterestIcon/>
+        </SocialMedia>
+        <Blue/>
+      </Footer>
+    </>
   );
 }
 
