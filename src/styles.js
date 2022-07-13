@@ -1,8 +1,8 @@
 import styled from 'styled-components'
-import {Linkedin} from '@styled-icons/boxicons-logos/Linkedin';
-import {Facebook} from '@styled-icons/boxicons-logos/Facebook';
-import {PinterestAlt} from '@styled-icons/boxicons-logos/PinterestAlt';
-import {Twitter} from '@styled-icons/boxicons-logos/Twitter';
+import { Linkedin } from '@styled-icons/boxicons-logos/Linkedin';
+import { Facebook } from '@styled-icons/boxicons-logos/Facebook';
+import { PinterestAlt } from '@styled-icons/boxicons-logos/PinterestAlt';
+import { Twitter } from '@styled-icons/boxicons-logos/Twitter';
 import pinkImage from './assets/pink.png';
 import yellowImage from './assets/yellow.png';
 import mapImage from './assets/map.png';
@@ -133,7 +133,7 @@ export const TwitterIcon = styled(Twitter)`
     color: #696969;
 `;
 
-export const Pink = styled.img`
+export const Pink = styled.div`
     position: absolute;
     width: 260px;
     height: 200px;
@@ -146,7 +146,7 @@ export const Pink = styled.img`
     }
 `;
 
-export const Blue = styled.img`
+export const Blue = styled.div`
     position: absolute;
     top: 0;
     right: 5%;
@@ -156,7 +156,7 @@ export const Blue = styled.img`
     background-size: cover;
 `;
 
-export const Yellow = styled.img`
+export const Yellow = styled.div`
     position: absolute;
     top: 5%;
     left: 10%;
@@ -166,7 +166,7 @@ export const Yellow = styled.img`
     background-size: cover;
 `;
 
-export const YellowRight = styled.img`
+export const YellowRight = styled.div`
     position: absolute;
     top: 72%;
     right: 20%;
@@ -192,7 +192,7 @@ export const YellowRight = styled.img`
     }
 `;
 
-export const PinkRight = styled.img`
+export const PinkRight = styled.div`
     position: absolute;
     width: 250px;
     top: 75%;
@@ -225,7 +225,7 @@ export const PinkRight = styled.img`
 `;
 
 
-export const Map = styled.img`
+export const Map = styled.div`
     position: absolute;
     top: 0;
     right: 0;
