@@ -73,30 +73,30 @@ export const Title = styled.h2`
 export const Button = styled.button`
     font-family: 'IBM Plex Sans Arabic', sans-serif;
     background-color: #FAD34F;
-    padding: 20px;
+    padding: 25px;
     color: #fff;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 18px;
     line-height: 18px;
     border-width: 0;
     border-radius: 500px;
-    width: 150px;
+    width: 230px;
     @media (min-width: 320px) {
         display: flex;
         justify-content: center;
-        width: 150px;
+        width: 230px;
         margin: 0 auto;
     }
     @media (min-width: 700px) {
         display: flex;
         justify-content: center;
-        width: 200px;
+        width: 230px;
         margin: 0 auto;
     }
     @media (min-width: 699px) {
         display: flex;
         justify-content: center;
-        width: 180px;
+        width: 230px;
         margin-left: 0px;
     }
 `;
@@ -118,6 +118,9 @@ export const SocialMedia = styled.section`
     margin-left: 300px;
     @media (max-width: 400px) {
         margin-left: 65%;
+    }
+    @media (max-width: 570px) {
+        margin-top: 15%;
     }
 `;
 
@@ -148,7 +151,6 @@ export const TwitterIcon = styled(Twitter)`
 `;
 
 export const Pink = styled.div`
-/* animation: ${float} 2s linear infinite; */
     position: absolute;
     width: 260px;
     height: 200px;
@@ -162,7 +164,6 @@ export const Pink = styled.div`
 `;
 
 export const Blue = styled.div`
-/* animation: ${float} 2s linear infinite; */
     position: absolute;
     top: 0;
     right: 5%;
