@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import { Linkedin } from '@styled-icons/boxicons-logos/Linkedin';
 import { Facebook } from '@styled-icons/boxicons-logos/Facebook';
 import { PinterestAlt } from '@styled-icons/boxicons-logos/PinterestAlt';
@@ -8,6 +8,16 @@ import yellowImage from './assets/yellow.png';
 import mapImage from './assets/map.png';
 import yellowRightImage from './assets/yellowRight.png';
 import blueImage from './assets/blue.png';
+
+const float = keyframes`
+    0%,100% {
+		transform:translatey(0)
+	}
+
+	50% {
+		transform:translatey(-20px)
+	}
+`;
 
 export const Box = styled.div`
     margin-top: 170px;
@@ -29,6 +39,8 @@ export const Form = styled.form`
     margin-top: 40px;
 
     input {
+        font-family: 'IBM Plex Sans Arabic', sans-serif;
+        font-size: 18px;
         padding: 35px;
         width: 30%;
         border-radius: 10px;
@@ -47,6 +59,7 @@ export const Form = styled.form`
 `;
 
 export const Title = styled.h2`
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
     font-size: 40px;
     line-height: 52px;
     font-weight: 400;
@@ -58,6 +71,7 @@ export const Title = styled.h2`
 `;
 
 export const Button = styled.button`
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
     background-color: #FAD34F;
     padding: 20px;
     color: #fff;
@@ -134,6 +148,7 @@ export const TwitterIcon = styled(Twitter)`
 `;
 
 export const Pink = styled.div`
+/* animation: ${float} 2s linear infinite; */
     position: absolute;
     width: 260px;
     height: 200px;
@@ -147,6 +162,7 @@ export const Pink = styled.div`
 `;
 
 export const Blue = styled.div`
+/* animation: ${float} 2s linear infinite; */
     position: absolute;
     top: 0;
     right: 5%;
@@ -157,16 +173,18 @@ export const Blue = styled.div`
 `;
 
 export const Yellow = styled.div`
+animation: ${float} 2s linear infinite;
     position: absolute;
     top: 5%;
-    left: 10%;
-    width: 100px;
-    height: 100px;
+    left: 5%;
+    width: 140px;
+    height: 120px;
     background-image: url(${yellowImage});
     background-size: cover;
 `;
 
 export const YellowRight = styled.div`
+animation: ${float} 2s linear infinite;
     position: absolute;
     top: 72%;
     right: 20%;
@@ -193,6 +211,7 @@ export const YellowRight = styled.div`
 `;
 
 export const PinkRight = styled.div`
+animation: ${float} 2s linear infinite;
     position: absolute;
     width: 250px;
     top: 75%;
@@ -226,6 +245,7 @@ export const PinkRight = styled.div`
 
 
 export const Map = styled.div`
+animation: ${float} 2s linear infinite;
     position: absolute;
     top: 0;
     right: 0;

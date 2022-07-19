@@ -30,7 +30,9 @@ function App() {
 
   const sendMsg = async () => {
     const headers = {
-      'Content-Type': 'application/json'
+      headers: {
+        'Content-Type': 'application/json'
+      }
     };
     const data = {
       user_name: name,
@@ -38,24 +40,9 @@ function App() {
       content: message
     };
 
-    api.post('http://localhost:8080/api/messages', JSON.stringify(data), headers)
-      .then(function (response) {
-        console.log(response);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-
-      // fetch("http://localhost:8080/api/messages", {
-      //   method: "POST",
-      //   headers: headers,
-      //   body: JSON.stringify(data),
-      // })
-      // .catch((error) => {
-      //   console.log(error);
-      //   return;
-      // });
-    };
+    api.post('/api/messages', JSON.stringify(data), headers)
+      .then(res => res)
+      .catch(error => console.log(error))};
 
   return (
     <>
