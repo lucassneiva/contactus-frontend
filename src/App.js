@@ -88,7 +88,7 @@ function App() {
         <Blue />
       </Footer>
     </Main>
-    )};
+    )}
 
     <ModalComp show={showModal}>
             <p className='msg-modal'>You sended a message!</p>

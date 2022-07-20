@@ -314,6 +314,12 @@ export const ModalComp = styled.div`
         font-size: 34px;
         width: 360px;
         height: 20px;
+        @media (max-width: 360px) {
+        display: flex;
+        justify-content: center;
+        font-size: 24px;
+        
+    }
     }
 
 `;
