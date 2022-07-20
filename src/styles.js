@@ -47,6 +47,7 @@ export const ButtonModal = styled.button`
     font-family: 'IBM Plex Sans Arabic', sans-serif;
     background-color: #FAD34F;
     padding: 25px;
+    cursor: pointer;
     color: #fff;
     font-weight: 400;
     font-size: 18px;
@@ -136,6 +137,7 @@ export const Button = styled.button`
     border-width: 0;
     border-radius: 500px;
     width: 230px;
+    cursor: pointer;
     @media (min-width: 320px) {
         display: flex;
         justify-content: center;
