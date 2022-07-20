@@ -17,6 +17,9 @@ import {
   YellowRight,
   PinkRight,
   Blue,
+  Main,
+  ModalComp,
+  ButtonModal,
 } from './styles.js';
 
 function App() {
@@ -24,11 +27,20 @@ function App() {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
+  const [showModal, setShowModal] = useState(false);
+
+
   const api = axios.create({
     baseURL: 'http://localhost:8080',
   });
 
   const sendMsg = async () => {
+    setShowModal(true);
+    const inputs = document.getElementsByTagName('input');
+    for (let i = 0; i < inputs.length; i++) {
+      inputs[i].value = '';
+      }
+    
     const headers = {
       headers: {
         'Content-Type': 'application/json'
@@ -46,6 +58,8 @@ function App() {
 
   return (
     <>
+    { !showModal && (
+    <Main>
       <Yellow />
       <Box>
         <Title>
@@ -53,10 +67,10 @@ function App() {
         </Title>
         <Form>
           <input type="text" placeholder='Your name*' onChange={(e) => setName(e.target.value)} />
-          <input type="text" placeholder='Your email*' onChange={(e) => setEmail(e.target.value)} />
+          <input type="email" placeholder='Your email*' onChange={(e) => setEmail(e.target.value)} />
           <input type="text" placeholder='Your message*' onChange={(e) => setMessage(e.target.value)} />
         </Form>
-        <Button onClick={sendMsg}>
+        <Button type="button" onClick={sendMsg}>
           Send message
         </Button>
       </Box>
@@ -73,7 +87,16 @@ function App() {
         </SocialMedia>
         <Blue />
       </Footer>
-    </>
+    </Main>
+    )};
+
+    <ModalComp show={showModal}>
+            <p className='msg-modal'>You sended a message!</p>
+            <ButtonModal onClick={() => setShowModal(false)}>
+                <p>New message</p>
+            </ButtonModal>
+        </ModalComp>
+      </>
   );
 }
 
