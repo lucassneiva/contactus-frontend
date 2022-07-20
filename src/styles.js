@@ -23,57 +23,6 @@ export const Main = styled.div`
     display: block;
 `;
 
-export const ModalComp = styled.div`
-    display: ${({show}) => (show ? 'flex' : 'none')};
-    position: absolute;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width:100%; 
-    background: white;
-    flex-direction: column;
-    gap: 60px;
-
-    .msg-modal {
-        font-family: 'IBM Plex Sans Arabic', sans-serif;
-        font-size: 34px;
-        width: 360px;
-        height: 20px;
-    }
-
-`;
-
-export const ButtonModal = styled.button`
-    font-family: 'IBM Plex Sans Arabic', sans-serif;
-    background-color: #FAD34F;
-    padding: 25px;
-    cursor: pointer;
-    color: #fff;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 18px;
-    border-width: 0;
-    border-radius: 500px;
-    width: 230px;
-    @media (min-width: 320px) {
-        display: flex;
-        justify-content: center;
-        width: 230px;
-        margin: 0 auto;
-    }
-    @media (min-width: 700px) {
-        display: flex;
-        justify-content: center;
-        width: 350px;
-        margin: 0 auto;
-    }
-    @media (min-width: 699px) {
-        display: flex;
-        justify-content: center;
-        width: 350px;
-    }
-`;
-
 
 export const Box = styled.div`
     margin-top: 170px;
@@ -346,5 +295,40 @@ animation: ${float} 2s linear infinite;
         width: 45%;
         height: 920px;
         top: -55px;
+    }
+`;
+
+export const ModalComp = styled.div`
+    display: ${({show}) => (show ? 'flex' : 'none')};
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width:100%; 
+    background: white;
+    flex-direction: column;
+    gap: 60px;
+
+    .msg-modal {
+        font-family: 'IBM Plex Sans Arabic', sans-serif;
+        font-size: 34px;
+        width: 360px;
+        height: 20px;
+    }
+
+`;
+
+export const ButtonModal = styled(Button)`
+    @media (min-width: 320px) {
+        display: flex;
+        justify-content: center;
+        width: 230px;
+    }
+    @media (min-width: 700px) {
+        width: 350px;
+        margin: 0 auto;
+    }
+    @media (min-width: 699px) {
+        width: 350px;
     }
 `;
